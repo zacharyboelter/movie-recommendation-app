@@ -1,10 +1,27 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
+import axios from "axios"
+
 
 
 const Movielist = () => {
+    const [movies, setMovies] = useState([])
+
+    useEffect( () => {
+        //fetch movie data from API
+        axios.get('/api/movies')
+            .then(response => {
+                setMovies(response.data)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }, [])
+
+
+
     return (
         <div>
-            {/* {JSX goes here} */}
+            {/* Display movies here */}
         </div>
     )
 }
