@@ -8,7 +8,7 @@ const Movielist = () => {
 
     useEffect( () => {
         //fetch movie data from API
-        axios.get('/api/movies')
+        axios.get('http://localhost:3001/api/movies/Inception')
             .then(response => {
                 setMovies(response.data)
             })
