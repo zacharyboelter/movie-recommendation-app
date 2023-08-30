@@ -5,15 +5,15 @@ const MovieSearch = () => {
     const [query, setQuery] = useState('')
     const [movieData, setMovieData] = useState(null)
 
-    const handleInputChange = (event) => {
-        setQuery(event.target.value)
-    }
+    // const handleInputChange = (event) => {
+    //     setQuery(event.target.value)
+    // }
 
     const fetchMovieData = async (title) => {
         // event.preventDefault()
         console.log('fetchMovieData called')
         try {
-            const response = await axios.get(`/http://localhost:3001/api/movies/${query}`)
+            const response = await axios.get(`/api/movies/${encodeURIComponent(title)}`)
             console.log('API request:', response.data)
             setMovieData(response.data)
         } catch (error) {
