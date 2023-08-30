@@ -1,15 +1,20 @@
 
-
+const cors = require('cors')
 const express = require('express')
+
+
 const app = express()
 const PORT = process.env.PORT || 3001
 
+app.use(cors())
+
+
 app.get('api/movies/:title', async(req, res) => {
   const { title } = req.params
-  const apiKey = '74d35cd9'
+  const apiKey = '6542a337'
 
   try {
-    const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&t=${title}`)
+    const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`)
     res.json(response.data)
   } catch (error) {
     console.error(error)
