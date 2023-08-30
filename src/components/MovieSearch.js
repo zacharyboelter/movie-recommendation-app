@@ -23,7 +23,7 @@ const MovieSearch = () => {
     return (
         <div>
             <h2>Search for a Movie</h2>
-            <form onSubmit={}fetchMovieData>
+            <form onSubmit={fetchMovieData}>
                 <input 
                     type="text"
                     value={query}
