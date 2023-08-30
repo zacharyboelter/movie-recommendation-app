@@ -9,8 +9,10 @@ const PORT = process.env.PORT || 3001
 app.use(cors())
 
 
-app.get('api/movies/:title', async(req, res) => {
-  const { title } = req.params
+app.get(`/api/movies/:title`, async(req, res) => {
+  console.log('API route hit'); 
+  const { title } = req.params;
+  console.log('Movie title:', title)
   const apiKey = '6542a337'
 
   try {

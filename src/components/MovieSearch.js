@@ -9,25 +9,33 @@ const MovieSearch = () => {
         setQuery(event.target.value)
     }
 
-    const fetchMovieData = async (event) => {
-        event.preventDefault()
-        
+    const fetchMovieData = async (title) => {
+        // event.preventDefault()
+        console.log('fetchMovieData called')
         try {
             const response = await axios.get(`/http://localhost:3001/api/movies/${query}`)
+            console.log('API request:', response.data)
             setMovieData(response.data)
         } catch (error) {
-            console.error(error)
+            console.error('Error fetching data:', error)
         }
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Form submitted'); // Debugging line
+        console.log('Search query:', query); // Debugging line
+        fetchMovieData(query);
+      };
 
     return (
         <div>
             <h2>Search for a Movie</h2>
-            <form onSubmit={fetchMovieData}>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     value={query}
-                    onChange={handleInputChange}
+                    onChange={(e) => setQuery(e.target.value)}
                     placeholder="Enter a movie title"
                 />
                 <button type="submit">Search</button>
