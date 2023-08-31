@@ -2,31 +2,15 @@ import React, {useState} from "react";
 import axios from 'axios'
 import { Button } from "@mui/material";
 
-const MovieSearch = () => {
+const MovieSearch = ({ onSearch }) => {
     const [query, setQuery] = useState('')
-    const [movieData, setMovieData] = useState(null)
 
-    // const handleInputChange = (event) => {
-    //     setQuery(event.target.value)
-    // }
-
-    const fetchMovieData = async (title) => {
-        // event.preventDefault()
-        console.log('fetchMovieData called')
-        try {
-            const response = await axios.get(`/api/movies/${encodeURIComponent(title)}`)
-            console.log('API request:', response.data)
-            setMovieData(response.data)
-        } catch (error) {
-            console.error('Error fetching data:', error)
-        }
-    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Form submitted'); // Debugging line
         console.log('Search query:', query); // Debugging line
-        fetchMovieData(query);
+        onSearch(query);
       };
 
     return (
@@ -41,18 +25,6 @@ const MovieSearch = () => {
                 />
                 <Button type="submit" variant="contained" color="primary">Search</Button>
             </form>
-            {movieData && (
-                <div>
-                    <h3>{movieData.Title}</h3>
-                    <p>Year: {movieData.Year}</p>
-                    <p>Genre: {movieData.Genre}</p>
-                    <p>Director: {movieData.Director}</p>
-                    <p>Actors: {movieData.Actors}</p>
-                    <p>Plot: {movieData.Plot}</p>
-                    <p>IMDB Rating: {movieData.imdbRating}</p>
-                    <img src={movieData.Poster} alt={`${movieData.Title} Poster`} />
-                </div>
-            )}
         </div>
     )
 }
