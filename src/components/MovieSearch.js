@@ -33,19 +33,22 @@ const MovieSearch = ({ onSearch }) => {
       };
 
     return (
-        <div>
+        <div className={classes.searchContainer}>
             <h2>Search for a Movie</h2>
             <form onSubmit={handleSubmit}>
-                <input 
-                    type="text"
+                <TextField 
+                    className={classes.input}
+                    variant="outlines"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Enter a movie title"
                 />
-                <Button type="submit" variant="contained" color="primary">Search</Button>
+                <Button className={classes.button}type="submit" variant="contained" color="secondary">
+                    Search
+                </Button>
             </form>
         </div>
-    )
+    );
 }
 
 export default MovieSearch
