@@ -1,5 +1,25 @@
 import React, {useState} from "react";
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
+import { makeStyles } from '@mui/material';
+
+const useStyles = makeStyles((theme) => ({
+    searchContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: theme.spacing(2),
+        backgroundColor: theme.palette.primary.main,
+        borderRadius: theme.shape.borderRadius,
+        marginBottom: theme.spacing(2),
+    },
+    input: {
+        width: '100%',
+        marginBottom: theme.spacing(1),
+    },
+    button: {
+        width: '100%',
+    },
+}));
 
 const MovieSearch = ({ onSearch }) => {
     const [query, setQuery] = useState('')
