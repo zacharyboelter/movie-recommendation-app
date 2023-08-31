@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios'
+import { Button } from "@mui/material";
 
 const MovieSearch = () => {
     const [query, setQuery] = useState('')
@@ -38,7 +39,7 @@ const MovieSearch = () => {
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Enter a movie title"
                 />
-                <button type="submit">Search</button>
+                <Button type="submit" variant="contained" color="primary">Search</Button>
             </form>
             {movieData && (
                 <div>
