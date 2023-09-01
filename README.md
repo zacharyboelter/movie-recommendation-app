@@ -31,7 +31,7 @@ Welcome to the Movie Recommendation App! This app allows users to search for mov
 
 ### Streaming Availability
 
-- See which streaming platforms a movie is available on.
+- See which streaming platforms a movie is available on. (Streaming Availability By Movie of the Night API)
 
 ## Getting Started
 
