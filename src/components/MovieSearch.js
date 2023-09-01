@@ -16,13 +16,12 @@ const MovieSearch = ({ onSearch }) => {
 
     return (
         <div className="text-center p-4">
-            <h2 className="text-2x1 font-semibold mb-4">Search for a Movie</h2>
-            <form class="flex flex-col items-center mb-2" onSubmit={handleSubmit}>
+            <form class="flex flex-row items-center mb-2" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Enter a movie title"
+                    placeholder="Search for a Movie"
                     class="px-2 py-1 border rounded mb-2"
                 />
                 <button 
