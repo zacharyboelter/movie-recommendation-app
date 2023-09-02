@@ -1,37 +1,13 @@
-# Movie Recommendation App
+# Movie Recommendation App - Version 1.0
 
-Welcome to the Movie Recommendation App! This app allows users to search for movies, add them to personalized lists, rate them, write reviews, and explore related movies. It's a comprehensive platform designed to enhance your movie-watching experience.
+Welcome to the Movie Recommendation App! This app allows users to search for movies and explore their details.
 
 ## Features
 
-### Movie Lists
+### Movie Search
 
-- Add movies to your "To Watch" list.
-- Mark movies as "Previously Seen" and move them to that list.
-
-### Filter and Sorting
-
-- Filter movies in your lists by genre, year, director, and actors.
-- Sort movies by criteria such as rating, release date, and title.
-
-### Rating and Reviews
-
-- Rate movies using a 5-star system and save the rating.
-- Write and save reviews for movies.
-
-### User Accounts
-
-- Create an account with a username and password.
-- Log in to access personalized lists, ratings, and reviews.
-
-### Related Movies and Trailers
-
-- View related movies at the bottom of a movie's details page.
-- Watch trailers for movies on their details page.
-
-### Streaming Availability
-
-- See which streaming platforms a movie is available on. (Streaming Availability By Movie of the Night API)
+- Search for movies by title.
+- View detailed information about a selected movie.
 
 ## Getting Started
 
@@ -43,20 +19,14 @@ Welcome to the Movie Recommendation App! This app allows users to search for mov
 ## Tech Stack
 
 - Frontend: React
-- Backend: Node.js / Djano
-- Database: MySQL / PostgreSQL / MongoDB
+- Backend: Node.js
+- Database: None for this version.
 
 ## Development Roadmap
 
-- Define data models and database structure.
-- Implement user authentication and accounts.
-- Build movie search and details components.
-- Create personalized lists functionality.
-- Develop rating and review features.
-- Add related movie recommendations.
-- Integrate streaming availability API.
-- Enhance UI/UX design.
-- Deploy the app to a hosting platform.
+- Create movie search and details components.
+- Implement movie search functionality.
+- Develop the UI for displaying movie details.
 
 ## Contributing
 
@@ -67,6 +37,60 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 3. Commit your changes: `git commit -m 'Add some feature'`.
 4. Push to the branch: `git push origin feature/your-feature-name`.
 5. Open a pull request.
+
+
+## Future Enhancements
+
+While Version 1.0 of the Movie Recommendation App focuses on essential movie search and display functionality, we have exciting plans for future versions to make your movie-watching experience even better:
+
+### User Profiles
+
+- Create personalized user profiles with profile pictures and user information.
+- Implement user authentication and secure login/logout functionality.
+
+### Personalized Movie Lists
+
+- Allow users to create custom movie lists (e.g., "Favorites," "Watchlist") to organize their movie selections.
+- Enable users to add and remove movies from their lists.
+
+### Ratings and Reviews
+
+- Implement a comprehensive rating and review system, including star ratings and written reviews.
+- Allow users to view and edit their movie ratings and reviews.
+
+### Social Features
+
+- Add the ability for users to connect with friends and see their movie activity (e.g., liked movies, reviews).
+- Implement social sharing features to recommend movies to friends.
+
+### Recommendations
+
+- Enhance movie recommendations by incorporating machine learning algorithms.
+- Provide personalized movie suggestions based on user preferences and viewing history.
+
+### Streaming Availability
+
+- Integrate the Movie of the Night Streaming Availability API to show users where they can stream their favorite movies.
+- Allow users to filter movies by available streaming platforms.
+
+### Enhanced UI/UX
+
+- Continuously improve the user interface for a seamless and enjoyable browsing experience.
+- Implement responsive design for mobile and tablet devices.
+
+### Database Integration
+
+- Set up a database (MySQL, PostgreSQL, MongoDB) to store user data, movie lists, ratings, and reviews securely.
+- Ensure data persistence and user privacy.
+
+### Deployment
+
+- Deploy the app to a hosting platform for public access and use.
+- Implement continuous integration and deployment (CI/CD) pipelines for automated updates.
+
+We're committed to enhancing the Movie Recommendation App to provide you with a feature-rich movie-watching platform. Stay tuned for exciting updates and new features in future releases!
+
+
 
 ## License
 
